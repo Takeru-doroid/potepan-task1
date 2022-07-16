@@ -257,6 +257,7 @@ a:hover{
   }
   .main-contents{
     margin-top:450px;
+    text-align:center;
   }
   .main-images{
     display:flex;
