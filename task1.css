@@ -58,6 +58,10 @@ a:hover{
   font-size:12px;
 }
 
+.hamburger-menu{
+  display:none;
+}
+
 .main-container{
   max-width: 1140px;
   padding:100px 50px 28px;
@@ -204,6 +208,31 @@ a:hover{
     z-index:10;
     padding:20px 0px;
   }
+  
+  .hamburger-menu{
+    display:block;
+    float:right;
+    width:30px;
+    height:21px;
+    position:relative;
+  }
+  
+  .hamburger-menu-line, .hamburger-menu-line::before, .hamburger-menu-line::after{
+    display:block;
+    width:100%;
+    height:3px;
+    background-color:#000;
+    position:absolute;
+    content:"";
+  }
+  
+  .hamburger-menu-line::before{
+    top:10.5px;
+  }
+  
+  .hamburger-menu-line::after{
+    top:21px;
+  }
 }
 
 /*最大幅1024px以下に適用（~用）*/
@@ -238,8 +267,8 @@ a:hover{
     background-size:cover;
     display:block;
     background-position:center;
-    height:900px;
-    padding-bottom:80px;
+    height:950px;
+    padding-bottom:200px;
   }
   .main-container{
     max-width:none;
@@ -256,13 +285,17 @@ a:hover{
     clear:left;
   }
   .main-contents{
-    margin-top:450px;
-    text-align:center;
+    padding-top:600px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    float:none;
   }
   .main-images{
     display:flex;
     justify-content:center;
     flex-direction:row;
+    width:100%;
   }
   .main-image1{
     width:27.5%;
@@ -276,13 +309,20 @@ a:hover{
   .main-contents h2{
     font-size:25px;
     line-height:36px;
+    width:100%;
   }
   .main-btns-DocumentRequest{
     display:none;
   }
   .main-btns-counseling{
-    display:block;
-    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    width:100vw;
+    font-size:14px;
+    box-sizing:border-box;
+    padding:0px 20px;
   }
   .main-btns{
     margin-bottom:15px;
